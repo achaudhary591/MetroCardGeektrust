@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.geektrust.backend.models.MetroCardTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-06-11T12:21:16" hostname="Akshyas-MacBook-Air.local" time="0.011">
+<testsuite name="com.geektrust.backend.models.MetroCardTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-06-11T12:22:28" hostname="Akshyas-MacBook-Air.local" time="0.012">
   <properties/>
-  <testcase name="deductAmountShouldThrowInvalidAmountExceptionGivenInvalidAmount()" classname="com.geektrust.backend.models.MetroCardTest" time="0.004"/>
+  <testcase name="deductAmountShouldThrowInvalidAmountExceptionGivenInvalidAmount()" classname="com.geektrust.backend.models.MetroCardTest" time="0.005"/>
   <testcase name="addAmountShouldAddAmountToMetroCard()" classname="com.geektrust.backend.models.MetroCardTest" time="0.0"/>
   <testcase name="addAmountShouldThrowInvalidAmountExceptionGivenInvalidAmount()" classname="com.geektrust.backend.models.MetroCardTest" time="0.001"/>
   <testcase name="deductAmountShouldDeductAmountFromMetroCard()" classname="com.geektrust.backend.models.MetroCardTest" time="0.001"/>
-  <testcase name="hasSufficientBalanceShouldReturnTrueGivenAmount()" classname="com.geektrust.backend.models.MetroCardTest" time="0.001"/>
+  <testcase name="hasSufficientBalanceShouldReturnTrueGivenAmount()" classname="com.geektrust.backend.models.MetroCardTest" time="0.003"/>
   <testcase name="hasSufficientBalanceShouldReturnFalseGivenAmount()" classname="com.geektrust.backend.models.MetroCardTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

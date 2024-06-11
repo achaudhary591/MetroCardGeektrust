@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.geektrust.backend.repositories.MetroCardRepositoryImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-06-11T12:21:16" hostname="Akshyas-MacBook-Air.local" time="0.004">
+<testsuite name="com.geektrust.backend.repositories.MetroCardRepositoryImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-06-11T12:22:28" hostname="Akshyas-MacBook-Air.local" time="0.004">
   <properties/>
   <testcase name="saveMetroCardShouldSaveMetroCard()" classname="com.geektrust.backend.repositories.MetroCardRepositoryImplTest" time="0.001"/>
   <testcase name="findByCardNumberShouldReturnEmptyIfCardNumberNotFound()" classname="com.geektrust.backend.repositories.MetroCardRepositoryImplTest" time="0.001"/>

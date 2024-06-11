@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.geektrust.backend.services.MetroCardServiceImplTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-06-11T12:21:17" hostname="Akshyas-MacBook-Air.local" time="0.033">
+<testsuite name="com.geektrust.backend.services.MetroCardServiceImplTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-06-11T12:22:29" hostname="Akshyas-MacBook-Air.local" time="0.044">
   <properties/>
-  <testcase name="rechargeShouldRechargeMetroCardGivenTravelCharge()" classname="com.geektrust.backend.services.MetroCardServiceImplTest" time="0.024"/>
-  <testcase name="shouldReturnNewMetroCardIfNotPresent()" classname="com.geektrust.backend.services.MetroCardServiceImplTest" time="0.004"/>
+  <testcase name="rechargeShouldRechargeMetroCardGivenTravelCharge()" classname="com.geektrust.backend.services.MetroCardServiceImplTest" time="0.032"/>
+  <testcase name="shouldReturnNewMetroCardIfNotPresent()" classname="com.geektrust.backend.services.MetroCardServiceImplTest" time="0.007"/>
   <testcase name="shouldReturnExistingMetroCardIfAlreadyPresent()" classname="com.geektrust.backend.services.MetroCardServiceImplTest" time="0.002"/>
   <testcase name="makePaymentShouldMakePaymentGivenTravelCharge()" classname="com.geektrust.backend.services.MetroCardServiceImplTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
