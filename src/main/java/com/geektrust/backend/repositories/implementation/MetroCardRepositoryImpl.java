@@ -12,28 +12,41 @@ public class MetroCardRepositoryImpl implements MetroCardRepository {
 
     public MetroCardRepositoryImpl(Map<String, MetroCard> metroCardMap) {
         this.metroCardMap = metroCardMap;
-        this.autoIncrement = metroCardMap.size();
+        this.autoIncrement = calculateInitialAutoIncrement(metroCardMap);
     }
 
     public MetroCardRepositoryImpl() {
-        this.metroCardMap = new HashMap<>();
+        this(new HashMap<>());
     }
 
     @Override
-    public MetroCard save(MetroCard entity) {
-        if(entity.getId() == null) {
-            autoIncrement++;
-            MetroCard metroCard = new MetroCard(Integer.toString(autoIncrement), entity.getCardNumber(), entity.getBalance());
-            metroCardMap.put(metroCard.getId(), metroCard);
-            return metroCard;
+    public MetroCard save(MetroCard metroCard) {
+        if(metroCard.getId() == null) {
+            String newId = generateNewId();
+            MetroCard newMetroCard = new MetroCard(newId, metroCard.getCardNumber(), metroCard.getBalance());
+            metroCardMap.put(newId, newMetroCard);
+            return newMetroCard;
         }
-        metroCardMap.put(entity.getId(), entity);
-        return entity;
+        metroCardMap.put(metroCard.getId(), metroCard);
+        return metroCard;
     }
 
     @Override
     public Optional<MetroCard> findByCardNumber(String cardNumber) {
-        Optional<MetroCard> maybeMetroCard = metroCardMap.values().stream().filter(metroCard -> metroCard.getCardNumber().equals(cardNumber)).findFirst();
-        return maybeMetroCard;
+        return metroCardMap.values().stream()
+                           .filter(metroCard -> metroCard.getCardNumber().equals(cardNumber))
+                           .findFirst();
+    }
+
+    private String generateNewId() {
+        autoIncrement++;
+        return Integer.toString(autoIncrement);
+    }
+
+    private int calculateInitialAutoIncrement(Map<String, MetroCard> map) {
+        return map.values().stream()
+                  .mapToInt(metroCard -> Integer.parseInt(metroCard.getId()))
+                  .max()
+                  .orElse(0);
     }
 }

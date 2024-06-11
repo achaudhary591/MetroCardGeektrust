@@ -13,27 +13,41 @@ public class PassengerRepositoryImpl implements PassengerRepository {
 
     public PassengerRepositoryImpl(Map<String, Passenger> passengerMap) {
         this.passengerMap = passengerMap;
-        this.autoIncrement = passengerMap.size();
+        this.autoIncrement = calculateInitialAutoIncrement(passengerMap);
     }
 
     public PassengerRepositoryImpl() {
-        this.passengerMap = new HashMap<>();
+        this(new HashMap<>());
     }
 
     @Override
-    public Passenger save(Passenger entity) {
-        if(entity.getId() == null) {
-            autoIncrement++;
-            Passenger passenger = new Passenger(Integer.toString(autoIncrement), entity.getMetroCard(), entity.getPassengerType(), entity.getBoardingStation());
-            passengerMap.put(passenger.getId(), passenger);
-            return passenger;
+    public Passenger save(Passenger passenger) {
+        if(passenger.getId() == null) {
+            String newId = generateNewId();
+            Passenger newPassenger = new Passenger(newId, passenger.getMetroCard(), passenger.getPassengerType(), passenger.getBoardingStation());
+            passengerMap.put(newId, newPassenger);
+            return newPassenger;
         }
-        passengerMap.put(entity.getId(), entity);
-        return entity;
+        passengerMap.put(passenger.getId(), passenger);
+        return passenger;
     }
 
     @Override
     public Optional<Passenger> findByMetroCard(MetroCard metroCard) {
-        return passengerMap.values().stream().filter(passenger -> passenger.getMetroCard().equals(metroCard)).findFirst();
+        return passengerMap.values().stream()
+                           .filter(passenger -> passenger.getMetroCard().equals(metroCard))
+                           .findFirst();
+    }
+
+    private String generateNewId() {
+        autoIncrement++;
+        return Integer.toString(autoIncrement);
+    }
+
+    private int calculateInitialAutoIncrement(Map<String, Passenger> map) {
+        return map.values().stream()
+                  .mapToInt(passenger -> Integer.parseInt(passenger.getId()))
+                  .max()
+                  .orElse(0);
     }
 }

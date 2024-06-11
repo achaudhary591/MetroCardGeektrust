@@ -6,8 +6,6 @@ import com.geektrust.backend.repositories.MetroCardRepository;
 import com.geektrust.backend.services.MetroCardService;
 import com.geektrust.backend.services.StationService;
 
-import java.util.Optional;
-
 public class MetroCardServiceImpl implements MetroCardService {
     private final StationService stationService;
     private final MetroCardRepository metroCardRepository;
@@ -19,14 +17,8 @@ public class MetroCardServiceImpl implements MetroCardService {
 
     @Override
     public MetroCard create(String cardNumber, int balance) {
-        Optional<MetroCard> maybeMetroCard = metroCardRepository.findByCardNumber(cardNumber);
-
-        if (!maybeMetroCard.isPresent()) {
-            MetroCard metroCard = new MetroCard(cardNumber, balance);
-            return metroCardRepository.save(metroCard);
-        }
-        return maybeMetroCard.get();
-
+        return metroCardRepository.findByCardNumber(cardNumber)
+            .orElseGet(() -> metroCardRepository.save(new MetroCard(cardNumber, balance)));
     }
 
     @Override

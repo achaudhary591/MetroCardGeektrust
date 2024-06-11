@@ -11,19 +11,19 @@ public class StationRepositoryImpl implements StationRepository {
 
     public StationRepositoryImpl(Map<String, Station> stationMap) {
         this.stationMap = stationMap;
-        this.autoIncrement = stationMap.size();
+        this.autoIncrement = calculateInitialAutoIncrement(stationMap);
     }
 
     public StationRepositoryImpl() {
-        this.stationMap = new HashMap<>();
+        this(new HashMap<>());
     }
 
     @Override
     public Station save(Station station) {
         if (station.getId() == null) {
-            autoIncrement++;
-            Station newStation = new Station(Integer.toString(autoIncrement), station.getStationName());
-            stationMap.put(newStation.getId(), newStation);
+            String newId = generateNewId();
+            Station newStation = new Station(newId, station.getStationName());
+            stationMap.put(newId, newStation);
             return newStation;
         }
         stationMap.put(station.getId(), station);
@@ -32,11 +32,25 @@ public class StationRepositoryImpl implements StationRepository {
 
     @Override
     public Optional<Station> findByName(String name) {
-        return stationMap.values().stream().filter(station -> station.getStationName().equals(name)).findFirst();
+        return stationMap.values().stream()
+                         .filter(station -> station.getStationName().equals(name))
+                         .findFirst();
     }
 
     @Override
     public List<Station> findAll() {
         return new ArrayList<>(stationMap.values());
+    }
+
+    private String generateNewId() {
+        autoIncrement++;
+        return Integer.toString(autoIncrement);
+    }
+
+    private int calculateInitialAutoIncrement(Map<String, Station> map) {
+        return map.values().stream()
+                  .mapToInt(station -> Integer.parseInt(station.getId()))
+                  .max()
+                  .orElse(0);
     }
 }

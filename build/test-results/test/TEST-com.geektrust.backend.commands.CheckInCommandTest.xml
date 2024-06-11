@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.geektrust.backend.commands.CheckInCommandTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-06-11T10:57:26" hostname="Akshyas-MacBook-Air.local" time="0.049">
+<testsuite name="com.geektrust.backend.commands.CheckInCommandTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-06-11T12:21:17" hostname="Akshyas-MacBook-Air.local" time="0.047">
   <properties/>
-  <testcase name="executeShouldPrintErrorMessageIfMetroCardNotFound()" classname="com.geektrust.backend.commands.CheckInCommandTest" time="0.038"/>
-  <testcase name="executeShouldCreatePassengerAndStationAndDeductAmountFromMetroCard()" classname="com.geektrust.backend.commands.CheckInCommandTest" time="0.004"/>
+  <testcase name="executeShouldPrintErrorMessageIfMetroCardNotFound()" classname="com.geektrust.backend.commands.CheckInCommandTest" time="0.037"/>
+  <testcase name="executeShouldCreatePassengerAndStationAndDeductAmountFromMetroCard()" classname="com.geektrust.backend.commands.CheckInCommandTest" time="0.003"/>
   <testcase name="executeShouldPrintErrorMessageIfStationNotFound()" classname="com.geektrust.backend.commands.CheckInCommandTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
