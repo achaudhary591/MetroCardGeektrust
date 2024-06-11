@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.geektrust.backend.services.StationServiceImplTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2024-06-11T10:57:26" hostname="Akshyas-MacBook-Air.local" time="0.077">
+  <properties/>
+  <testcase name="shouldReturnPassengerSummaryForStation()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.054"/>
+  <testcase name="shouldReturnNewStationIfNotPresent()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.003"/>
+  <testcase name="shouldAddTravelChargeToTravelChargeCollection()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.002"/>
+  <testcase name="shouldReturnAllStations()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.002"/>
+  <testcase name="shouldReturnExistingStationIfAlreadyPresent()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.001"/>
+  <testcase name="shouldReturnCollectionSummaryForStation()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.0"/>
+  <testcase name="shouldThrowStationNotFoundExceptionWhenAddingPassengerToBoardedList()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.002"/>
+  <testcase name="shouldReturnTravelChargeForPassengerWithReturnJourney()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.001"/>
+  <testcase name="getAllStations_shouldReturnAllStations()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.002"/>
+  <testcase name="shouldReturnTravelChargeForPassengerWithSingleJourney()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.001"/>
+  <testcase name="shouldAddPassengerToBoardedList()" classname="com.geektrust.backend.services.StationServiceImplTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

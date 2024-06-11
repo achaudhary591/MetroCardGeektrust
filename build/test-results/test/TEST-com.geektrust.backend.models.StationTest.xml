@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.geektrust.backend.models.StationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-06-11T10:57:25" hostname="Akshyas-MacBook-Air.local" time="0.002">
+  <properties/>
+  <testcase name="getTotalCollectionShouldReturnTotalCollection()" classname="com.geektrust.backend.models.StationTest" time="0.001"/>
+  <testcase name="addTravelChargeShouldAddTravelChargeToTravelChargeCollection()" classname="com.geektrust.backend.models.StationTest" time="0.0"/>
+  <testcase name="addDiscountShouldAddDiscountToDiscountCollection()" classname="com.geektrust.backend.models.StationTest" time="0.001"/>
+  <testcase name="addServiceFeeShouldAddServiceFeeToServiceFeeCollection()" classname="com.geektrust.backend.models.StationTest" time="0.0"/>
+  <testcase name="addPassengerShouldAddPassenger()" classname="com.geektrust.backend.models.StationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

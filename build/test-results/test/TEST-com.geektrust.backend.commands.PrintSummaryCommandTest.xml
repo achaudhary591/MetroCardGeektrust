@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.geektrust.backend.commands.PrintSummaryCommandTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-06-11T10:57:26" hostname="Akshyas-MacBook-Air.local" time="0.061">
+  <properties/>
+  <testcase name="executeShouldPrintCollectionAndPassengerSummary()" classname="com.geektrust.backend.commands.PrintSummaryCommandTest" time="0.061"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

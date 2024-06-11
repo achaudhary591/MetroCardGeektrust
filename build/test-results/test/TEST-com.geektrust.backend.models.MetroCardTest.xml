@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.geektrust.backend.models.MetroCardTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-06-11T10:57:25" hostname="Akshyas-MacBook-Air.local" time="0.01">
+  <properties/>
+  <testcase name="deductAmountShouldThrowInvalidAmountExceptionGivenInvalidAmount()" classname="com.geektrust.backend.models.MetroCardTest" time="0.003"/>
+  <testcase name="addAmountShouldAddAmountToMetroCard()" classname="com.geektrust.backend.models.MetroCardTest" time="0.0"/>
+  <testcase name="addAmountShouldThrowInvalidAmountExceptionGivenInvalidAmount()" classname="com.geektrust.backend.models.MetroCardTest" time="0.0"/>
+  <testcase name="deductAmountShouldDeductAmountFromMetroCard()" classname="com.geektrust.backend.models.MetroCardTest" time="0.001"/>
+  <testcase name="hasSufficientBalanceShouldReturnTrueGivenAmount()" classname="com.geektrust.backend.models.MetroCardTest" time="0.001"/>
+  <testcase name="hasSufficientBalanceShouldReturnFalseGivenAmount()" classname="com.geektrust.backend.models.MetroCardTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
