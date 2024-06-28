@@ -2,10 +2,6 @@
 
 You can find the problem statement here - [MetroCard](https://www.geektrust.com/challenge/metro-card)
 
-# Result
-
-![MetroCard_Geektrust](https://github.com/pgprajwal/Personal-Archive/blob/main/images/Geektrust_Metro_Card.jpeg)
-
 # Pre-requisites
 * Java 1.8/1.11/1.15
 * Gradle 6
